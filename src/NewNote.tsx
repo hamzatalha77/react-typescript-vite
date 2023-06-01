@@ -14,17 +14,16 @@ const NewNote = () => {
           <Col>
             <Form.Group controlId="tags">
               <Form.Label>Tags</Form.Label>
-              <Form.Select required />
+              {/* <Form.Select required /> */}
               <CreatableReactSelect isMulti />
             </Form.Group>
           </Col>
         </Row>
-        <Col>
-          <Form.Group controlId="markdown">
-            <Form.Label>Body</Form.Label>
-            <Form.Select required as="textarea" rows={15} />
-          </Form.Group>
-        </Col>
+
+        <Form.Group controlId="markdown">
+          <Form.Label>Body</Form.Label>
+          <Form.Control required as="textarea" rows={15} />
+        </Form.Group>
       </Stack>
     </Form>
   )
