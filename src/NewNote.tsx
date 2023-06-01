@@ -18,6 +18,12 @@ const NewNote = () => {
             </Form.Group>
           </Col>
         </Row>
+        <Col>
+          <Form.Group controlId="markdown">
+            <Form.Label>Body</Form.Label>
+            <Form.Select required as="textarea" rows={15} />
+          </Form.Group>
+        </Col>
       </Stack>
     </Form>
   )
