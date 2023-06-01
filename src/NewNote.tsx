@@ -1,5 +1,11 @@
+import { Form, Stack } from 'react-bootstrap'
+
 const NewNote = () => {
-  return <div>NewNote</div>
+  return (
+    <Form>
+      <Stack gap={4}> </Stack>
+    </Form>
+  )
 }
 
 export default NewNote
