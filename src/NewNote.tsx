@@ -1,4 +1,4 @@
-import { Form, Stack, Row, Col } from 'react-bootstrap'
+import { Form, Stack, Row, Col, Button } from 'react-bootstrap'
 import CreatableReactSelect from 'react-select/creatable'
 const NewNote = () => {
   return (
@@ -24,6 +24,11 @@ const NewNote = () => {
           <Form.Label>Body</Form.Label>
           <Form.Control required as="textarea" rows={15} />
         </Form.Group>
+        <Stack direction="horizontal" gap={2} className="justify-content-end">
+          <Button type="submit" variant="primary">
+            save
+          </Button>
+        </Stack>
       </Stack>
     </Form>
   )
