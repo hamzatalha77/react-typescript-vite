@@ -15,7 +15,6 @@ const NewNote = () => {
           <Col>
             <Form.Group controlId="tags">
               <Form.Label>Tags</Form.Label>
-              {/* <Form.Select required /> */}
               <CreatableReactSelect isMulti />
             </Form.Group>
           </Col>
