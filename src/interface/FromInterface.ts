@@ -2,7 +2,7 @@ export type Note = {
   id: string & NoteData
 }
 export type RawNote = {
-  id: string
+  id: string & RawNoteData
 }
 export type RawNoteData = {
   title: string
