@@ -36,6 +36,13 @@ const NewNote = ({ onSubmit }: NoteFormProps) => {
                 value={selectedTags.map((tag) => {
                   return { lable: tag.label, value: tag.id }
                 })}
+                onChange={(tags) => {
+                  setSelectedTags(
+                    tags.map((tag) => {
+                      return { lable: tag.lable, id: tag.value }
+                    })
+                  )
+                }}
                 isMulti
               />
             </Form.Group>
