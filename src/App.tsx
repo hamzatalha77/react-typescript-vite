@@ -8,9 +8,11 @@ import {
 import NewNote from './NewNote'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container } from 'react-bootstrap'
+import { useLocalStorage } from './useLocalStorage'
+import { RawNote, Tag } from './interface/FromInterface'
 const App = () => {
   const [notes, setNotes] = useLocalStorage<RawNote[]>('NOTES', [])
-  const [tags, setTags] = useLocalStorage<Tags[]>('TAGS', [])
+  const [tags, setTags] = useLocalStorage<Tag[]>('TAGS', [])
   return (
     <Container>
       <Router>
