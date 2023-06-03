@@ -4,12 +4,13 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom'
-import { useLocalStorage } from 'react'
+
 import NewNote from './NewNote'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container } from 'react-bootstrap'
 const App = () => {
-  const [notes, setNotes] = useLocalStorage<RawNote[]>('notes', [])
+  const [notes, setNotes] = useLocalStorage<RawNote[]>('NOTES', [])
+  const [tags, setTags] = useLocalStorage<Tags[]>('TAGS', [])
   return (
     <Container>
       <Router>
