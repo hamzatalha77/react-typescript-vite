@@ -6,7 +6,7 @@ const NewNote = () => {
   const titleRef = useRef<HTMLInputElement>(null)
   const markdownRef = useRef<HTMLTextAreaElement>(null)
 
-  const handleSubmit = (e: FormEvent): void => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
   }
   return (
