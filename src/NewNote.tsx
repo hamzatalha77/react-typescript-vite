@@ -2,7 +2,7 @@ import { FormEvent, useRef } from 'react'
 import { Form, Stack, Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import CreatableReactSelect from 'react-select/creatable'
-const NewNote = () => {
+const NewNote = ({ onSubmit }) => {
   const titleRef = useRef<HTMLInputElement>(null)
   const markdownRef = useRef<HTMLTextAreaElement>(null)
 
