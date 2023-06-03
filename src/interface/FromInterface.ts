@@ -1,13 +1,13 @@
 export type Note = {
-  id: string & NoteData
-}
+  id: string
+} & NoteData
 export type RawNote = {
-  id: string & RawNoteData
-}
+  id: string
+} & RawNoteData
 export type RawNoteData = {
   title: string
   markdown: string
-  tasIds: string[]
+  tagIds: string[]
 }
 export type NoteData = {
   title: string
