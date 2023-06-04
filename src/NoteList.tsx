@@ -1,4 +1,5 @@
-import { Col, Row, Stack } from 'react-bootstrap'
+import { Button, Col, Row, Stack } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const NoteList = () => {
   return (
@@ -8,7 +9,11 @@ const NoteList = () => {
           <h1>Notes</h1>
         </Col>
         <Col xs="auto">
-          <Stack gap={2} direction="horizontal"></Stack>
+          <Stack gap={2} direction="horizontal">
+            <Link to="/new">
+              <Button variant="primary">Create</Button>
+            </Link>
+          </Stack>
         </Col>
       </Row>
     </>
