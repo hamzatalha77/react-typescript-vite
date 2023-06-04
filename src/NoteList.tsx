@@ -1,5 +1,5 @@
 const NoteList = () => {
-  return <div>NoteList</div>
+  return <></>
 }
 
 export default NoteList
