@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { v4 as uuidV4 } from 'uuid'
 import { NoteFormProps } from './NewNote'
 
-const NewForm = ({ onSubmit }: NoteFormProps) => {
+const NewForm = ({ onSubmit, onAddTag, availableTags }: NoteFormProps) => {
   const titleRef = useRef<HTMLInputElement>(null)
   const markdownRef = useRef<HTMLTextAreaElement>(null)
   const [selectedTags, setSelectedTags] = useState<Tag[]>([])
