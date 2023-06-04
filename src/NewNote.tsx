@@ -2,7 +2,7 @@ import React from 'react'
 import NewForm from './NewForm'
 import { NoteData, Tag } from './interface/FromInterface'
 
-type NewNoteProps = {
+export type NewNoteProps = {
   onSubmit: (data: NoteData) => void
   onAddTag: (tag: Tag) => void
   availableTags: Tag[]
