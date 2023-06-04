@@ -5,9 +5,7 @@ import CreatableReactSelect from 'react-select/creatable'
 import { NoteData, Tag } from './interface/FromInterface'
 import { useState } from 'react'
 import { v4 as uuidV4 } from 'uuid'
-type NoteFormProps = {
-  onSubmit: (data: NoteData) => void
-}
+
 const NewForm = ({ onSubmit }: NoteFormProps) => {
   const titleRef = useRef<HTMLInputElement>(null)
   const markdownRef = useRef<HTMLTextAreaElement>(null)
