@@ -1,6 +1,6 @@
 import { FormEvent, useRef } from 'react'
 import { Form, Stack, Row, Col, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import CreatableReactSelect from 'react-select/creatable'
 import { NoteData, Tag } from './interface/FromInterface'
 import { useState } from 'react'
@@ -11,7 +11,7 @@ const NewForm = ({ onSubmit, onAddTag, availableTags }: NoteFormProps) => {
   const titleRef = useRef<HTMLInputElement>(null)
   const markdownRef = useRef<HTMLTextAreaElement>(null)
   const [selectedTags, setSelectedTags] = useState<Tag[]>([])
-
+  const navigate = useNavigate()
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     onSubmit({
@@ -19,6 +19,7 @@ const NewForm = ({ onSubmit, onAddTag, availableTags }: NoteFormProps) => {
       markdown: markdownRef.current!.value,
       tags: selectedTags,
     })
+    navigate('..')
   }
   return (
     <Form onSubmit={handleSubmit}>
