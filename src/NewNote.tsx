@@ -1,4 +1,3 @@
-import React from 'react'
 import NewForm from './NewForm'
 import { NoteData, Tag } from './interface/FromInterface'
 

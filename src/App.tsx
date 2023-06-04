@@ -11,6 +11,7 @@ import { Container } from 'react-bootstrap'
 import { useLocalStorage } from './useLocalStorage'
 import { NoteData, RawNote, Tag } from './interface/FromInterface'
 import { v4 as uuidV4 } from 'uuid'
+import NoteList from './NoteList'
 const App = () => {
   const [notes, setNotes] = useLocalStorage<RawNote[]>('NOTES', [])
   const [tags, setTags] = useLocalStorage<Tag[]>('TAGS', [])
@@ -38,7 +39,7 @@ const App = () => {
     <Container>
       <Router>
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
+          <Route path="/" element={<NoteList />} />
           <Route
             path="/new"
             element={
