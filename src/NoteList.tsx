@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { Button, Col, Row, Stack, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import ReactSelect from 'react-select'
-const NoteList = () => {
+import { NoteListProps, Tag } from './interface/FromInterface'
+const NoteList = ({ availableTags }: NoteListProps) => {
+  const [selectedTags, setSelectedTags] = useState<Tag[]>([])
   return (
     <>
       <Row>
@@ -28,11 +31,6 @@ const NoteList = () => {
           <Form.Group controlId="tags">
             <Form.Label>Tags</Form.Label>
             <ReactSelect
-              onCreateOption={(label) => {
-                const newTag = { id: uuidV4(), label }
-                onAddTag(newTag)
-                setSelectedTags((prev) => [...prev, newTag])
-              }}
               value={selectedTags.map((tag) => {
                 return { label: tag.label, value: tag.id }
               })}

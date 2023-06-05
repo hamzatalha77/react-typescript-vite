@@ -18,3 +18,6 @@ export type Tag = {
   id: string
   label: string
 }
+export type NoteListProps = {
+  availableTags: Tag[]
+}
