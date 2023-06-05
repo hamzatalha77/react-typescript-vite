@@ -20,4 +20,5 @@ export type Tag = {
 }
 export type NoteListProps = {
   availableTags: Tag[]
+  notes: Note[]
 }

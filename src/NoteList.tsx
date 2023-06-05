@@ -1,11 +1,17 @@
 import { useState } from 'react'
 import { Button, Col, Row, Stack, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { useMemo } from 'react'
 import ReactSelect from 'react-select'
 import { NoteListProps, Tag } from './interface/FromInterface'
-const NoteList = ({ availableTags }: NoteListProps) => {
+const NoteList = ({ availableTags, notes }: NoteListProps) => {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([])
   const [title, setTitle] = useState('')
+  const filteredNotes = useMemo(() => {
+    return notes.filter((note) => {
+      return title === '' || note.title.toLowerCase()
+    })
+  }, [title, selectedTags, notes])
   return (
     <>
       <Row className="align-items-center mb-4">
