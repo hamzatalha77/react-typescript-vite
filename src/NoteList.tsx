@@ -54,7 +54,13 @@ const NoteList = ({ availableTags }: NoteListProps) => {
           </Form.Group>
         </Col>
       </Form>
-      <Row xs={1} sm={2} lg={3} xl={4} className="g-3"></Row>
+      <Row xs={1} sm={2} lg={3} xl={4} className="g-3">
+        {filteredNotes.map((note) => (
+          <Col key={note.id}>
+            <NoteCard />
+          </Col>
+        ))}
+      </Row>
     </>
   )
 }
