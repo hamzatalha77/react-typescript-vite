@@ -17,7 +17,14 @@ const NoteList = () => {
           </Stack>
         </Col>
       </Row>
-      <Form></Form>
+      <Form className="mb-4">
+        <Col>
+          <Form.Group controlId="title">
+            <Form.Label>Title</Form.Label>
+            <Form.Control type="text" />
+          </Form.Group>
+        </Col>
+      </Form>
     </>
   )
 }
