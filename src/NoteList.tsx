@@ -1,4 +1,4 @@
-import { Button, Col, Row, Stack } from 'react-bootstrap'
+import { Button, Col, Row, Stack, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const NoteList = () => {
@@ -17,6 +17,7 @@ const NoteList = () => {
           </Stack>
         </Col>
       </Row>
+      <Form></Form>
     </>
   )
 }
