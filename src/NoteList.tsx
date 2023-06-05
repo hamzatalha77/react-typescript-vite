@@ -1,6 +1,6 @@
 import { Button, Col, Row, Stack, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-
+import ReactSelect from 'react-select'
 const NoteList = () => {
   return (
     <>
@@ -27,7 +27,7 @@ const NoteList = () => {
         <Col>
           <Form.Group controlId="tags">
             <Form.Label>Tags</Form.Label>
-            <CreatableReactSelect
+            <ReactSelect
               onCreateOption={(label) => {
                 const newTag = { id: uuidV4(), label }
                 onAddTag(newTag)
