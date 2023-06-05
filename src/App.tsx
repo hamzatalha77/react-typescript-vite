@@ -39,7 +39,7 @@ const App = () => {
     <Container>
       <Router>
         <Routes>
-          <Route path="/" element={<NoteList />} />
+          <Route path="/" element={<NoteList availableTags={tags} />} />
           <Route
             path="/new"
             element={
