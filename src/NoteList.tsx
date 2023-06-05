@@ -12,6 +12,7 @@ const NoteList = () => {
           <Stack gap={2} direction="horizontal">
             <Link to="/new">
               <Button variant="primary">Create</Button>
+              <Button variant="outline-secondary">Edit Tags</Button>
             </Link>
           </Stack>
         </Col>
