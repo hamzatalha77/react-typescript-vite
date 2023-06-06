@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useMemo } from 'react'
 import ReactSelect from 'react-select'
 import { NoteListProps, Tag } from './interface/FromInterface'
+import NoteCard from './NoteCard'
 const NoteList = ({ availableTags, notes }: NoteListProps) => {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([])
   const [title, setTitle] = useState('')
@@ -70,7 +71,7 @@ const NoteList = ({ availableTags, notes }: NoteListProps) => {
       <Row xs={1} sm={2} lg={3} xl={4} className="g-3">
         {filteredNotes.map((note) => (
           <Col key={note.id}>
-            <NoteCard />
+            <NoteCard id={note.id} title={note.title} tags={note.tags} />
           </Col>
         ))}
       </Row>
