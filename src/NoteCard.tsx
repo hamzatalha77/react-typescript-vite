@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NoteCard = () => {
+const NoteCard = ({ id, title, tags }) => {
   return <div>NoteCard</div>
 }
 
