@@ -20,5 +20,10 @@ export type Tag = {
 }
 export type NoteListProps = {
   availableTags: Tag[]
-  notes: Note[]
+  notes: SimplifiedNote[]
+}
+export type SimplifiedNote = {
+  tags: Tag[]
+  title: string
+  id: string
 }
