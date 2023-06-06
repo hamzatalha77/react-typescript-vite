@@ -41,7 +41,7 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={<NoteList availableTags={tags} notes={notes} />}
+            element={<NoteList notes={notesWithTags} availableTags={tags} />}
           />
           <Route
             path="/new"
