@@ -1,7 +1,7 @@
-import React from 'react'
 import { SimplifiedNote } from './interface/FromInterface'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import styles from './NoteList.modules.css'
 
 const NoteCard = ({ id, title, tags }: SimplifiedNote) => {
   return (
