@@ -5,4 +5,4 @@ const NoteLayout = ({ notes }: NoteLyoutProps) => {
   return <div>NoteLayout</div>
 }
 
-export default NoteLayout
+export default NoteLayouts
