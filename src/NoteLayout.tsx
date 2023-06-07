@@ -1,4 +1,3 @@
-import React from 'react'
 import { NoteLyoutProps } from './interface/FromInterface'
 
 const NoteLayout = ({ notes }: NoteLyoutProps) => {
