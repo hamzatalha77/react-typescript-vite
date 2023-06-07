@@ -5,7 +5,7 @@ const NoteLayout = ({ notes }: NoteLyoutProps) => {
   const { id } = useParams()
   const note = notes.find((n) => n.id === id)
   if (note == null) return <Navigate to="/" replace />
-  return <Outlet />
+  return <Outlet context={note} />
 }
 
 export default NoteLayout
