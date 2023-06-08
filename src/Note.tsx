@@ -18,6 +18,14 @@ const Note = () => {
             </Stack>
           )}
         </Col>
+        <Col xs="auto">
+          <Stack gap={2} direction="horizontal">
+            <Link to="/new">
+              <Button variant="primary">Create</Button>
+            </Link>
+            <Button variant="outline-secondary">Edit Tags</Button>
+          </Stack>
+        </Col>
       </Row>
     </>
   )
