@@ -7,8 +7,8 @@ const NoteLayout = ({ notes }: NoteLyoutProps) => {
   if (note == null) return <Navigate to="/" replace />
   return <Outlet context={note} />
 }
-const useNote(){
+const useNote = () => {
   return useOutletContext<Note>()
 }
 
-export default {NoteLayout,useNote} 
+export default { NoteLayout, useNote }
