@@ -1,7 +1,5 @@
-import React from 'react'
-
 const Note = () => {
-  return <div>Note</div>
+  const note = useNote()
 }
 
 export default Note
