@@ -12,7 +12,7 @@ import { useLocalStorage } from './useLocalStorage'
 import { NoteData, RawNote, Tag } from './interface/FromInterface'
 import { v4 as uuidV4 } from 'uuid'
 import NoteList from './NoteList'
-import NoteLayout from './NoteLayout'
+import { NoteLayout } from './NoteLayout'
 const App = () => {
   const [notes, setNotes] = useLocalStorage<RawNote[]>('NOTES', [])
   const [tags, setTags] = useLocalStorage<Tag[]>('TAGS', [])
