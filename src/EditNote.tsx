@@ -1,16 +1,16 @@
 import NewForm from './NewForm'
 import { NoteData, Tag } from './interface/FromInterface'
 
-export type NoteFormProps = {
+export type EditNoteProps = {
   onSubmit: (data: NoteData) => void
   onAddTag: (tag: Tag) => void
   availableTags: Tag[]
 }
-const NewNote = ({ onSubmit, onAddTag, availableTags }: NoteFormProps) => {
+const EditNote = ({ onSubmit, onAddTag, availableTags }: EditNoteProps) => {
   return (
     <div>
-      <h1 className="mb-4">New Note</h1>
-      <NewForm
+      <h1 className="mb-4">Edit Note</h1>
+      <NoteForm
         onSubmit={onSubmit}
         onAddTag={onAddTag}
         availableTags={availableTags}
@@ -19,4 +19,4 @@ const NewNote = ({ onSubmit, onAddTag, availableTags }: NoteFormProps) => {
   )
 }
 
-export default NewNote
+export default EditNote
