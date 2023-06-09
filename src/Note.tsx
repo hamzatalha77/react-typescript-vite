@@ -31,6 +31,7 @@ const Note = () => {
           </Stack>
         </Col>
       </Row>
+      <ReactMarkdown>{note.markdown}</ReactMarkdown>
     </>
   )
 }
