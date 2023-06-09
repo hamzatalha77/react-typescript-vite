@@ -5,7 +5,7 @@ export type NoteFormProps = {
   onSubmit: (data: NoteData) => void
   onAddTag: (tag: Tag) => void
   availableTags: Tag[]
-}
+} & NoteData
 const NewNote = ({ onSubmit, onAddTag, availableTags }: NoteFormProps) => {
   return (
     <div>
