@@ -1,4 +1,5 @@
 import NewForm from './NewForm'
+import { useNote } from './NoteLayout'
 import { NoteData, Tag } from './interface/FromInterface'
 
 export type EditNoteProps = {
@@ -7,6 +8,7 @@ export type EditNoteProps = {
   availableTags: Tag[]
 }
 const EditNote = ({ onSubmit, onAddTag, availableTags }: EditNoteProps) => {
+  const note = useNote()
   return (
     <div>
       <h1 className="mb-4">Edit Note</h1>
