@@ -39,7 +39,12 @@ const App = () => {
     setNotes((prevNotes) => {
       return prevNotes.map((note) => {
         if (note.id === id) {
-          return { ...data, id: uuidV4(), tagIds: tags.map((tag) => tag.id) }
+          return {
+            ...note,
+            ...data,
+            id: uuidV4(),
+            tagIds: tags.map((tag) => tag.id),
+          }
         } else {
           return note
         }
