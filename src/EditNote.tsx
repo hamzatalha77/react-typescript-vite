@@ -10,7 +10,7 @@ const EditNote = ({ onSubmit, onAddTag, availableTags }: EditNoteProps) => {
   return (
     <div>
       <h1 className="mb-4">Edit Note</h1>
-      <NoteForm
+      <NewForm
         onSubmit={onSubmit}
         onAddTag={onAddTag}
         availableTags={availableTags}
