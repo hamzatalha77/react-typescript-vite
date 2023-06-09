@@ -13,6 +13,7 @@ const EditNote = ({ onSubmit, onAddTag, availableTags }: EditNoteProps) => {
     <div>
       <h1 className="mb-4">Edit Note</h1>
       <NewForm
+        title={note.title}
         onSubmit={(data) => onSubmit(note.id, data)}
         onAddTag={onAddTag}
         availableTags={availableTags}
