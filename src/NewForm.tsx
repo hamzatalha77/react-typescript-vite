@@ -68,7 +68,13 @@ const NewForm = ({
 
         <Form.Group controlId="markdown">
           <Form.Label>Body</Form.Label>
-          <Form.Control required as="textarea" ref={markdownRef} rows={15} />
+          <Form.Control
+            required
+            as="textarea"
+            ref={markdownRef}
+            rows={15}
+            defaultValue={markdown}
+          />
         </Form.Group>
         <Stack direction="horizontal" gap={2} className="justify-content-end">
           <Button type="submit" variant="primary">
