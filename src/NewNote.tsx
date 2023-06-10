@@ -6,7 +6,14 @@ export type NoteFormProps = {
   onAddTag: (tag: Tag) => void
   availableTags: Tag[]
 } & Partial<NoteData>
-const NewNote = ({ onSubmit, onAddTag, availableTags }: NoteFormProps) => {
+const NewNote = ({
+  onSubmit,
+  onAddTag,
+  availableTags,
+  title = '',
+  markdown = '',
+  tags = [],
+}: NoteFormProps) => {
   return (
     <div>
       <h1 className="mb-4">New Note</h1>
