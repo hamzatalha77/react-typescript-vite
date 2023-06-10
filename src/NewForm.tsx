@@ -17,7 +17,7 @@ const NewForm = ({
 }: NoteFormProps) => {
   const titleRef = useRef<HTMLInputElement>(null)
   const markdownRef = useRef<HTMLTextAreaElement>(null)
-  const [selectedTags, setSelectedTags] = useState<Tag[]>([])
+  const [selectedTags, setSelectedTags] = useState<Tag[]>(tags)
   const navigate = useNavigate()
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -35,7 +35,7 @@ const NewForm = ({
           <Col>
             <Form.Group controlId="title">
               <Form.Label>Title</Form.Label>
-              <Form.Control required ref={titleRef} />
+              <Form.Control required ref={titleRef} defaultValue={title} />
             </Form.Group>
           </Col>
           <Col>
