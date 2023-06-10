@@ -1,10 +1,11 @@
 import { Badge, Button, Col, Row, Stack } from 'react-bootstrap'
 import { useNote } from './NoteLayout'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import { NoteProps } from './interface/FromInterface'
 const Note = ({ onDelete }: NoteProps) => {
   const note = useNote()
+  const navigate = useNavigate()
 
   return (
     <>
