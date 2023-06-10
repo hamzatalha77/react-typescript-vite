@@ -51,6 +51,11 @@ const App = () => {
       })
     })
   }
+  const onDeleteNote = (id: string) => {
+    setNotes((prevNotes) => {
+      return prevNotes.filter((note) => note.id !== id)
+    })
+  }
   const addTag = (tag: Tag) => {
     setTags((prev) => [...prev, tag])
   }
