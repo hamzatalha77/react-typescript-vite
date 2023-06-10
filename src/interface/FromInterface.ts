@@ -30,3 +30,6 @@ export type SimplifiedNote = {
 export type NoteLyoutProps = {
   notes: Note[]
 }
+export type NoteProps = {
+  onDelete: (id: string) => void
+}
