@@ -6,7 +6,12 @@ import ReactSelect from 'react-select'
 import { NoteListProps, Tag } from './interface/FromInterface'
 import NoteCard from './NoteCard'
 import EditTagsModal from './EditTagsModal'
-const NoteList = ({ availableTags, notes }: NoteListProps) => {
+const NoteList = ({
+  availableTags,
+  notes,
+  onUpdateTag,
+  onDeleteTag,
+}: NoteListProps) => {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([])
   const [title, setTitle] = useState('')
   const [editTagsModalIsOpen, setEditTagsModalIsOpen] = useState(false)
@@ -86,6 +91,8 @@ const NoteList = ({ availableTags, notes }: NoteListProps) => {
         show={editTagsModalIsOpen}
         handleClose={() => setEditTagsModalIsOpen(false)}
         availableTags={availableTags}
+        onUpdateTag={onUpdateTag}
+        onDeleteTag={onDeleteTag}
       />
     </>
   )

@@ -21,6 +21,8 @@ export type Tag = {
 export type NoteListProps = {
   availableTags: Tag[]
   notes: SimplifiedNote[]
+  onUpdateTag: (id: string, label: string) => void
+  onDeleteTag: (id: string) => void
 }
 export type SimplifiedNote = {
   tags: Tag[]
@@ -37,4 +39,6 @@ export type EditTagsModalProps = {
   show: boolean
   availableTags: Tag[]
   handleClose: () => void
+  onUpdateTag: (id: string, label: string) => void
+  onDeleteTag: (id: string) => void
 }

@@ -6,6 +6,8 @@ const EditTagsModal = ({
   availableTags,
   show,
   handleClose,
+  onUpdateTag,
+  onDeleteTag,
 }: EditTagsModalProps) => {
   return (
     <Modal show={show} onHide={handleClose}>
@@ -18,7 +20,7 @@ const EditTagsModal = ({
             {availableTags.map((tag) => (
               <Row key={tag.id}>
                 <Col>
-                  <Form.Control type="text" value={tag.lable} />
+                  <Form.Control type="text" value={tag.label} />
                 </Col>
                 <Col xs="auto">
                   <Button variant="outline-danger">&times;</Button>
