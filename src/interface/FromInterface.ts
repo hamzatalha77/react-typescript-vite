@@ -33,3 +33,8 @@ export type NoteLyoutProps = {
 export type NoteProps = {
   onDelete: (id: string) => void
 }
+export type EditTagsModalProps = {
+  show: boolean
+  availableTags: Tag[]
+  handleClose: () => void
+}

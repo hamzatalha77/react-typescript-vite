@@ -1,9 +1,14 @@
 import { Button, Col, Modal, Row, Stack } from 'react-bootstrap'
 import { Form } from 'react-router-dom'
+import { EditTagsModalProps } from './interface/FromInterface'
 
-const EditTagsModal = ({ availableTags }) => {
+const EditTagsModal = ({
+  availableTags,
+  show,
+  handleClose,
+}: EditTagsModalProps) => {
   return (
-    <Modal>
+    <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
         <Modal.Title>Edit Tags</Modal.Title>
       </Modal.Header>
