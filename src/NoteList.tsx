@@ -77,7 +77,11 @@ const NoteList = ({ availableTags, notes }: NoteListProps) => {
           </Col>
         ))}
       </Row>
-      <EditTagsModal show={} handleClose={} availableTags={} />
+      <EditTagsModal
+        show={editTagsModalIsOpen}
+        handleClose={setEditTagsModalIsOpen}
+        availableTags={availableTags}
+      />
     </>
   )
 }
