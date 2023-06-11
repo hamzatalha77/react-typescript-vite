@@ -1,7 +1,7 @@
 import { Button, Col, Modal, Row, Stack } from 'react-bootstrap'
 import { Form } from 'react-router-dom'
 
-const EditTagsModal = () => {
+const EditTagsModal = ({ availableTags }) => {
   return (
     <Modal>
       <Modal.Header closeButton>
@@ -12,7 +12,9 @@ const EditTagsModal = () => {
           <Stack gap={2}>
             {availableTags.map((tag) => (
               <Row key={tag.id}>
-                <Col></Col>
+                <Col>
+                  <Form.Control type="text" value={tag.lable} />
+                </Col>
                 <Col xs="auto">
                   <Button variant="outline-danger">&times;</Button>
                 </Col>
