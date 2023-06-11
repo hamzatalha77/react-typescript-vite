@@ -9,6 +9,7 @@ import EditTagsModal from './EditTagsModal'
 const NoteList = ({ availableTags, notes }: NoteListProps) => {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([])
   const [title, setTitle] = useState('')
+  const [editTagsModalIsOpen, setEditTagsModalIsOpen] = useState(false)
   const filteredNotes = useMemo(() => {
     return notes.filter((note) => {
       return (
