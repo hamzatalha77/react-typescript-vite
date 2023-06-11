@@ -5,6 +5,7 @@ import { useMemo } from 'react'
 import ReactSelect from 'react-select'
 import { NoteListProps, Tag } from './interface/FromInterface'
 import NoteCard from './NoteCard'
+import EditTagsModal from './EditTagsModal'
 const NoteList = ({ availableTags, notes }: NoteListProps) => {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([])
   const [title, setTitle] = useState('')
